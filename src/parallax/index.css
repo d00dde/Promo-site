@@ -1,0 +1,14 @@
+.water {
+	height: 1000px;
+	background-color: #eee;
+}
+.parallax-container {
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+.parallax-img {
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
