@@ -17,13 +17,13 @@ export const pages = [
 ];
 
 export const links = [
-	{ path: '/', title: 'Главная', dropdown: false },
-	{ path: '', title: 'Услуги', dropdown: true, childs: [
-		{ path: '/buy', title: 'Купить сайт', dropdown: false },
-		{ path: '/subscribe', title: 'Подписка на сайт', dropdown: false },
-		{ path: '/SEO', title: 'Продвижение сайта', dropdown: false }
+	{ path: '/', title: 'Главная'},
+	{ title: 'Услуги', childs: [
+			{ path: '/buy', title: 'Купить сайт'},
+			{ path: '/subscribe', title: 'Подписка на сайт'},
+			{ path: '/SEO', title: 'Продвижение сайта'}
 		] 
 	},
-	{ path: '/contacts', title: 'Контакты', dropdown: false },
-	{ path: '/about', title: 'О нас', dropdown: false },
+	{ path: '/contacts', title: 'Контакты'},
+	{ path: '/about', title: 'О нас'}
 ]

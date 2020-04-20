@@ -20,4 +20,8 @@ html {
 }
 .page {
 	min-height: 70vh;
+	padding-top: 70px;
+}
+.root{
+	position: relative;
 }

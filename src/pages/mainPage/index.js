@@ -1,16 +1,16 @@
 import React from 'react';
-import './mainPage.css';
 import { data } from '../../data';
-//import Presss from '../../components/Complex/PresentationBlock_1';
-//import { SliderWithModal } from '../../wrappers/sliderWithModal';
+import PresentationBlock from '../../components/PresentationBlock';
+import Features from '../../components/Features';
+import Loader from '../../components/Loader';
 
 export const MainPage = () => {
+
 	return (
 		<main className='main-page-wrapper page'>
-			<h2>MainPage</h2>
-			{/*<Presss data={data.presentation}/>
-			<SliderWithModal data={data.slider} />*/}
-			
+			<PresentationBlock data={data.mainPage.PresentationBlock} />
+			<Features data={data.mainPage.FeaturesBlock} />
+			<Loader />
 		</main>
 	)
 	

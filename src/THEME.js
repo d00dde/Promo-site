@@ -1,11 +1,12 @@
 export const THEME = {
-	MAIN_COLOR: '#3949ab',
+	MAIN_COLOR: '#FFA000',
 	BACKGROUND_COLOR: '#fff',
-	NAV_TEXT_COLOR: '#fff',
-	NAV_HOVER_COLOR: '#5c6bc0',
+	NAV_TEXT_COLOR: '#eeeeee',
+	NAV_HOVER_COLOR: '#F57C00',
 	DANGER_COLOR: 'tomato',
 	COMPONENT_TEXT_COLOR: '#ddd',
 	FOOTER_TEXT_COLOR: '#fff',
+	DECOR_COLOR: '#FFA000'
 }
 
 export const setCss = (css) => {

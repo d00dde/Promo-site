@@ -8,24 +8,21 @@ export const data = {
 		{title: 'email', value: '8800853535', link: '#', icon: faEnvelope },
 		{title: 'address', value: '8800853535', link: '#', icon: faMapMarkerAlt }
 	],
-	presentation: {
-		title: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat optio, in id dolore impedit sapiente!',
-		content: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci incidunt accusantium, alias sapiente odit autem unde eum cumque esse temporibus maiores neque! A exercitationem deleniti culpa eveniet laudantium necessitatibus animi. Mollitia quod dolor aperiam sunt, quos fugiat ex consequuntur voluptatum.',
-		imgSrc: '/img/present.jpg',
-		imgAlt: 'presentation'
-	},
-	slider: {
-		size:{
-			width:'1000px',
-			height: '600px'
+	mainPage: {
+		PresentationBlock: {
+			BgImgSrc: '/img/mainPage/mainImg.jpg',
+			mainTitle: 'Lorem	ipsum non dolar sit',
+			mainText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit repellat eum natus nobis, officia cum aspernatur, temporibus laudantium vitae dolor itaque hic nemo fuga expedita cumque minima ut sunt, quaerat ab totam eligendi repudiandae earum ipsa. Id quibusdam delectus impedit.	',
 		},
-		slides:[
-			{ imgPrev: '/img/preview/1.jpg', imgFull: '/img/fullsize/1.jpg', title:'Lorem', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, possimus.'},
-			{ imgPrev: '/img/preview/2.jpg', imgFull: '/img/fullsize/2.jpg', title:'Lorem', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, possimus.'},
-			{ imgPrev: '/img/preview/3.jpg', imgFull: '/img/fullsize/3.jpg', title:'Lorem', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, possimus.'},
-			{ imgPrev: '/img/preview/4.jpg', imgFull: '/img/fullsize/4.jpg', title:'Lorem', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, possimus.'},
-			{ imgPrev: '/img/preview/5.jpg', imgFull: '/img/fullsize/5.jpg', title:'Lorem', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, possimus.'},
-			{ imgPrev: '/img/preview/6.jpg', imgFull: '/img/fullsize/6.jpg', title:'Lorem', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, possimus.'},
-		]
+		FeaturesBlock: {
+			BgImgSrc: '/img/mainPage/featuresImg.jpg',
+			title:'Что мы предлагаем:',
+			features: [
+				{title: 'Высокое качество', description: 'Вы получите оптимизированный и современный веб-сайт, который понравится пользователям и будет соответствовать стандартам поисковых систем.', icon: ''},
+				{title: 'Гибкие условия', description: 'Мы предоставляем разные сервисы: аренда сайта, техподдержка, разные способы рекламы продвижения. Вы получите оптимальное решение именно для Вашего бизнеса.', icon: ''},
+				{title: 'Что-то ещё...', description: 'Ещё что-то охуенное, чего не делают наши конкуренты. Мы пока и сами не придумали, но скоро придумаем.', icon: ''},
+			]
+		}
+		
 	}
 }
