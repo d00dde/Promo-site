@@ -1,16 +1,14 @@
 import React from 'react';
 import { THEME } from '../../THEME';
 import styled from "styled-components";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import  * as solid from '@fortawesome/free-solid-svg-icons';
-//import * as brands from '@fortawesome/free-brands-svg-icons';
 
 export default ({ data:{ BgImgSrc, title, features }}) => {
-
   const Wrapper = styled.div`
     position: relative;
     overflow: hidden;    
     min-height: 400px;
+    padding-bottom: 50px;
+    color: ${THEME.LIGHT_COMPONENT_TEXT_COLOR}
   `;
 
   const BgImage = styled.img`
@@ -21,7 +19,6 @@ export default ({ data:{ BgImgSrc, title, features }}) => {
     filter: opacity(25%) sepia(60%);
     width: 100%;
     height: auto;
-    max-height: 1000px;
     z-index: 0;
   `;
   const FeaturesTitle = styled.h2`
@@ -29,7 +26,7 @@ export default ({ data:{ BgImgSrc, title, features }}) => {
     text-align: center;
     font-size: 3rem;
     padding: 60px;
-    z-index: 2;
+    z-index: 1;
     ::after{
       content:'';
       position: absolute;
@@ -43,32 +40,51 @@ export default ({ data:{ BgImgSrc, title, features }}) => {
     }
   `;
   const Features = styled.div`
+    position: relative;  
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 30px;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
   `;
-  const FeatureBlock = styled.div`
-    width: 25%;
+  
+  const Feature = styled.div`
+    width: 30%;
+    display: flex;
+    flex-direction: row;
   `;
   const FeatureIcon = styled.img`
-    width: 30px;
-    height: 30px;
+    width: 20%;
+    object-fit: contain;
   `;
-  const FeatureTitle = styled.div`
-
+  
+  const DescrWrapper = styled.div`
+    width: 80%;
+  `;
+  const FeatureTitle = styled.h3`
+    text-align: center;
+    font-size: 1.5rem;
   `;
   const FeatureDescription = styled.div`
-
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
   `;
 
   const featuresList = features.map(({ title, description, icon }) => {
-    return (<FeatureBlock>
-        <FeatureIcon src='/img/icons/medal.svg'></FeatureIcon>
-        <FeatureTitle>{title}</FeatureTitle>
-        <FeatureDescription>{description}</FeatureDescription>
-      </FeatureBlock>);
+    return (<Feature key={title}>
+        <FeatureIcon src={icon} />
+        <DescrWrapper>
+          <FeatureTitle>{title}</FeatureTitle>
+          <FeatureDescription>{description}</FeatureDescription>
+        </DescrWrapper>
+      </Feature>);
   });
-  console.log(solid)
+
   return (
 		<Wrapper>
       <BgImage src={BgImgSrc} alt='bg-img'/>

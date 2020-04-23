@@ -4,6 +4,7 @@ import { SubscribePage } from './subscribePage';
 import { SEOPage } from './SEOPage';
 import { ContactsPage } from './contactsPage';
 import { AboutPage } from './aboutPage';
+import {data} from '../data';
 
 
 
@@ -16,14 +17,14 @@ export const pages = [
 	{ path: '/about', component: AboutPage },
 ];
 
-export const links = [
-	{ path: '/', title: 'Главная'},
-	{ title: 'Услуги', childs: [
-			{ path: '/buy', title: 'Купить сайт'},
-			{ path: '/subscribe', title: 'Подписка на сайт'},
-			{ path: '/SEO', title: 'Продвижение сайта'}
-		] 
-	},
-	{ path: '/contacts', title: 'Контакты'},
-	{ path: '/about', title: 'О нас'}
-]
+export const links = data.navbarLinks.map(({ title, childs = null , path = null }) => {
+	if(childs){
+		return {
+			title,
+			childs: childs.map(({ title, path }) => { return { path, title }})
+		};
+	}
+	return { path, title }
+});
+
+

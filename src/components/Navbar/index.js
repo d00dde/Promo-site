@@ -7,7 +7,7 @@ import { data } from '../../data';
 import styled from "styled-components";
 
 export const Navbar = () => {
-
+	console.log(links)
 	const Wrapper = styled.nav`
 		position: fixed;
 		width: 100%;
@@ -26,7 +26,7 @@ export const Navbar = () => {
 			text-decoration: none;
 			text-transform: uppercase;
 			cursor: pointer;
-			opacity: 0.7;
+			opacity: 1;
 		}
 		&.hide {
 			opacity: 0;
@@ -48,12 +48,29 @@ export const Navbar = () => {
 		a {
 			color: ${THEME.NAV_TEXT_COLOR};
 			transition: .3s;
+			position: relative;
+		}
+		a:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 70%;
+			transform: scaleX(0);
+			height: 5px;
+			background-color: ${THEME.NAV_HOVER_COLOR};
+			transition: .3s;
 		}
 		a:hover {
-			background-color: ${THEME.NAV_HOVER_COLOR};
+			color: ${THEME.NAV_HOVER_COLOR};
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+		a:hover:after {
+			transform: scaleX(1);
 		}
 		.active {
-			background-color: ${THEME.NAV_HOVER_COLOR};
+			color: ${THEME.NAV_HOVER_COLOR};
+
 			cursor: default;
 		}
 		.link-0 {
@@ -63,7 +80,9 @@ export const Navbar = () => {
 		.dropdown {
 			position: relative;
 			padding-right: 15px;
-			opacity: 0.7;
+		}
+		.dropdown:hover {
+			background-color: rgba(0, 0, 0, 0.2);
 		}
 		.dropdown:after {
 			content: '\\25BC';
@@ -95,10 +114,10 @@ export const Navbar = () => {
 			top: 70px;
 			left: 0;
 			width: 230px;
-			background-color: ${THEME.MAIN_COLOR};
 			transform: scaleY(0);
 			transform-origin: top;
 			overflow: hidden;
+			background-color: rgba(0, 0, 0, 0.2);
 			transition: all 0.5s;
 		}
 		.link-0.dropdown:hover .links {
@@ -160,7 +179,7 @@ export const Navbar = () => {
 							</div>
 		 				</div>
 	}
-
+	
 	return (
 			<Wrapper className='nav-wrapper'>
 				<BgImage  src={data.mainPage.PresentationBlock.BgImgSrc} alt='first-img'/>

@@ -6,6 +6,8 @@ export default () => {
 
   const Wrapper = styled.div`
     text-transform: none;
+    position: relative;
+    z-index: 2;
     font-size: 25px;
     margin-left: 20px;
     padding: 8px;

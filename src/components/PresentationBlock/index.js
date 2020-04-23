@@ -8,7 +8,7 @@ export default ({ data:{ BgImgSrc, mainTitle, mainText }}) => {
     position: relative;
     display: flex;
     height: 100vh;
-    color: ${THEME.COMPONENT_TEXT_COLOR};
+    color: ${THEME.DARK_COMPONENT_TEXT_COLOR};
     
   `;
   const BgImage = styled.img`

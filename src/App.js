@@ -19,6 +19,7 @@ export const App = () => {
     return () => style.remove();
   }, []);
   const { modal, openModal } = useModal();
+
   return (
   	<div className='container'>
 	  	

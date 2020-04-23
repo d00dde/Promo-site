@@ -2,6 +2,17 @@ import  { faPhoneAlt, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid
 import { faViber } from '@fortawesome/free-brands-svg-icons';
 
 export const data = {
+	navbarLinks: [
+		{ path: '/', title: 'Главная'},
+		{ title: 'Услуги', childs: [
+				{ path: '/buy', title: 'Купить сайт'},
+				{ path: '/subscribe', title: 'Подписка на сайт'},
+				{ path: '/SEO', title: 'Продвижение сайта'}
+			] 
+		},
+		{ path: '/contacts', title: 'Контакты'},
+		{ path: '/about', title: 'О нас'}
+	],
 	footerLinks: [
 		{title: 'phone', value: '8800853535', link: '#', icon: faPhoneAlt },
 		{title: 'viber', value: '8800853535', link: '#', icon: faViber },
@@ -16,13 +27,25 @@ export const data = {
 		},
 		FeaturesBlock: {
 			BgImgSrc: '/img/mainPage/featuresImg.jpg',
-			title:'Что мы предлагаем:',
+			title:'Почему выгодно заказать сайт у нас:',
 			features: [
-				{title: 'Высокое качество', description: 'Вы получите оптимизированный и современный веб-сайт, который понравится пользователям и будет соответствовать стандартам поисковых систем.', icon: ''},
-				{title: 'Гибкие условия', description: 'Мы предоставляем разные сервисы: аренда сайта, техподдержка, разные способы рекламы продвижения. Вы получите оптимальное решение именно для Вашего бизнеса.', icon: ''},
-				{title: 'Что-то ещё...', description: 'Ещё что-то охуенное, чего не делают наши конкуренты. Мы пока и сами не придумали, но скоро придумаем.', icon: ''},
+				{title: 'Высокое качество', description: 'Вы получите оптимизированный и современный веб-сайт, который понравится пользователям и будет соответствовать стандартам поисковых систем.', icon: '/img/icons/approval.png'},
+				{title: 'Гибкие условия', description: 'Мы предоставляем разные сервисы: аренда сайта, техподдержка, разные способы рекламы продвижения. Вы получите оптимальное решение именно для Вашего бизнеса.', icon: '/img/icons/hierarchy.png'},
+				{title: 'Что-то ещё...', description: 'Ещё что-то охуенное, чего не делают наши конкуренты. Мы пока и сами не придумали, но скоро придумаем.', icon: '/img/icons/profit.png'},
+			]
+		},
+		StagesBlock: {
+			
+		},
+		ProposalsBlock: {
+			title: 'Условия аренды сайтов:',
+			proposals: [
+				{title: 'Одностраничный сайт', description: '', price: '10', period: '1 неделя'},
+				{title: '', description: '', price: '', period: ''},
+				{title: '', description: '', price: '', period: ''}
 			]
 		}
+
 		
 	}
 }
