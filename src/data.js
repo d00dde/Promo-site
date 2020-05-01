@@ -40,9 +40,9 @@ export const data = {
 		ProposalsBlock: {
 			title: 'Условия аренды сайтов:',
 			proposals: [
-				{title: 'Одностраничный сайт', description: '', price: '10', period: '1 неделя'},
-				{title: '', description: '', price: '', period: ''},
-				{title: '', description: '', price: '', period: ''}
+				{title: 'Landing page', description: 'Одностраничный сайт, рассказывающий о товаре или услуге. Есть возможность обратного звонка клиенту', price: '10', period: '1 неделя'},
+				{title: 'Корпоративный сайт', description: 'Сайт, состоящий из 5-7 страниц, подробно рассказывающий о компании и услугах. Может ', price: '30', period: '2 недели'},
+				{title: 'Интернет-магазин', description: '', price: '30', period: '2 недели'}
 			]
 		}
 
